@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function orthography(number) {
+            if (number < 0) {
+                return "Số không phải là số chính phương.";
+            }
+
+            let squareRoot = Math.sqrt(number);
+            if (Number.isInteger(squareRoot)) {
+                return "Số là số chính phương.";
+            } else {
+                return "Số không phải là số chính phương.";
+            }
+        }
+
+        // Nhập một số từ người dùng
+        let input = +prompt("Nhập một số:");
+
+        // Kiểm tra và in kết quả
+        let result= orthography(input);
+        console.log(result);
+</script>
+</html>

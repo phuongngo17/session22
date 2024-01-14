@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Nhập một số có 4 chữ số từ người dùng
+        let number = +prompt("Nhập một số có 4 chữ số:");
+
+        // Kiểm tra xem số có đúng 4 chữ số hay không
+        if (number < 1000 || number > 9999) {
+            console.log("Số không hợp lệ. Vui lòng nhập một số có 4 chữ số.");
+        } else {
+            // Tách các chữ số
+            let thousands = Math.floor(number / 1000);
+            let hundreds = Math.floor((number % 1000) / 100);
+            let tens = Math.floor((number % 100) / 10);
+            let units = number % 10;
+
+            // In các chữ số ra màn hình console
+            console.log("Chữ số hàng nghìn: " , thousands);
+            console.log("Chữ số trăm: " , hundreds);
+            console.log("Chữ số chục: " , tens);
+            console.log("Chữ số đơn vị: " , units);
+        }
+</script>
+</html>

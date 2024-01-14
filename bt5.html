@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+   function equations(a, b) {
+        if (a === 0) {
+            if (b === 0) {
+                return "Phương trình vô số nghiệm.";
+            } else {
+                return "Phương trình vô nghiệm.";
+            }
+        } else {
+            let x = -b / a;
+            return "Nghiệm của phương trình là x = " + x;
+        }
+    }
+
+    // Nhập các hệ số từ người dùng
+    let a = +prompt("Nhập hệ số a:");
+    let b = +prompt("Nhập hệ số b:");
+
+    // Giải phương trình và in kết quả
+    let result = equations(a, b);
+    console.log(result);
+</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Nhập tháng từ người dùng
+        let month = +prompt("Nhập tháng (1-12):");
+
+        // Nhập năm từ người dùng
+        let year = +prompt("Nhập năm:");
+
+        // Kiểm tra tính hợp lệ của giá trị nhập vào và tính số ngày trong tháng
+        if (isNaN(month) || isNaN(year) || month < 1 || month > 12 || year < 1) {
+            console.log("Giá trị nhập vào không hợp lệ.");
+        } else {
+            let daysInMonth;
+
+            switch (month) {
+                case 2:
+                    if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+                        daysInMonth = 29;
+                    } else {
+                        daysInMonth = 28;
+                    }
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    daysInMonth = 30;
+                    break;
+                default:
+                    daysInMonth = 31;
+            }
+
+            console.log(`Số ngày trong tháng ${month} năm ${year}: ${daysInMonth}`);
+        }
+</script>
+</html>

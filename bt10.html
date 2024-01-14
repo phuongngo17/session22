@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // giá trị truthy là một giá trị được coi là đúng 
+    // khi được chuyển đổi thành  kiểu boolean,
+    // giá trị falsy là giá trị được coi là sai 
+    // khi được chuyển đổi thành kiểu boolean
+    // các giá trị falsy trong javascript bao gồm:
+    // false giá trị boolean sai/
+    // 0: giá trị số 0
+    // "" hoặc '': chuỗi rỗng
+    // null: giá trị null
+    // undefined: giá trị undefined
+    // NaN: giá trị NaN(không phải là một số hợp lệ)
+
+
+   // ví dụ
+   // Hàm kiểm tra giá trị truthy hoặc falsy
+    function checkTruthyFalsy(value) {
+        if (value) {
+            console.log(value + " là một giá trị truthy.");
+        } else {
+            console.log(value + " là một giá trị falsy.");
+        }
+    }
+
+    // Kiểm tra các giá trị
+    checkTruthyFalsy(true);      // truthy
+    checkTruthyFalsy(false);     // falsy
+    checkTruthyFalsy(0);         // falsy
+    checkTruthyFalsy(42);        // truthy
+    checkTruthyFalsy("");        // falsy
+    checkTruthyFalsy("Hello");   // truthy
+    checkTruthyFalsy(null);      // falsy
+    checkTruthyFalsy(undefined); // falsy
+    checkTruthyFalsy(NaN);       // falsy
+</script>
+</html>

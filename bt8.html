@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Nhập số thứ nhất từ người dùng
+        let number1 = +prompt("Nhập số thứ nhất:");
+
+        // Nhập số thứ hai từ người dùng
+        let number2 = +prompt("Nhập số thứ hai:");
+
+        // Nhập phép tính từ người dùng
+        let operator = prompt("Nhập phép tính (+, -, *, /):");
+
+        let result;
+
+        // Kiểm tra tính hợp lệ của đầu vào và thực hiện phép tính
+        if (isNaN(number1) || isNaN(number2)) {
+            console.log("Đầu vào không hợp lệ.");
+        } else {
+            switch (operator) {
+                case "+":
+                    result = number1 + number2;
+                    console.log("Kết quả: " + result);
+                    break;
+                case "-":
+                    result = number1 - number2;
+                    console.log("Kết quả: " + result);
+                    break;
+                case "*":
+                    result = number1 * number2;
+                    console.log("Kết quả: " + result);
+                    break;
+                case "/":
+                    if (number2 === 0) {
+                        console.log("Không thể chia cho 0.");
+                    } else {
+                        result = number1 / number2;
+                        console.log("Kết quả: " + result);
+                    }
+                    break;
+                default:
+                    console.log("Phép tính không hợp lệ.");
+            }
+        }
+</script>
+</html>
